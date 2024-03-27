@@ -8,11 +8,19 @@
 import SwiftUI
 
 struct CarouselItemView: View {
+  
+  let order: OrderType
+  
     var body: some View {
-        Text(/*@START_MENU_TOKEN@*/"Hello, World!"/*@END_MENU_TOKEN@*/)
+      Image(order.image)
+        .resizable()
+        .scaledToFit()
+        .cornerRadius(12)
+      
     }
 }
 
-#Preview {
-    CarouselItemView()
+#Preview("CarouselItemView", traits: .sizeThatFitsLayout) {
+  CarouselItemView(order: OrderType(id: 1, name: "", image: "barbecue-banner"))
+    .padding()
 }
