@@ -8,17 +8,21 @@
 import SwiftUI
 
 struct ContentView: View {
-    var body: some View {
+  var body: some View {
+    VStack {
+      NavigationBar()
+        .padding(.horizontal, 15)
+      
+      
+      ScrollView(.vertical, showsIndicators: false) {
         VStack {
-            Image(systemName: "globe")
-                .imageScale(.large)
-                .foregroundStyle(.tint)
-            Text("Hello, world!")
+          OrderTypeGridView()
         }
-        .padding()
+      }
     }
+  }
 }
 
-#Preview {
-    ContentView()
+#Preview() {
+  ContentView()
 }
