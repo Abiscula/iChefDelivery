@@ -8,17 +8,24 @@
 import SwiftUI
 
 struct StoresContainerView: View {
-  
-  let title = "Lojas"
-  
+    
+    let title = "Lojas"
+    
     var body: some View {
-      VStack {
-        Text(title)
-          .font(.headline)
-      }
+        VStack(alignment: .leading) {
+            Text(title)
+                .font(.headline)
+            
+            VStack(alignment: .leading, spacing: 30) {
+                ForEach(storesMock) { mock in
+                    StoreItemView(order: mock)
+                }
+            }
+        }
+        .padding(20)
     }
 }
 
-#Preview {
+#Preview("StoresContainerView", traits: .sizeThatFitsLayout) {
     StoresContainerView()
 }
