@@ -20,6 +20,7 @@
 		C386127F2BAF9033003F0DF2 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = C386127E2BAF9033003F0DF2 /* Assets.xcassets */; };
 		C38612822BAF9033003F0DF2 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = C38612812BAF9033003F0DF2 /* Preview Assets.xcassets */; };
 		C386128B2BAF9414003F0DF2 /* NavigationBar.swift in Sources */ = {isa = PBXBuildFile; fileRef = C386128A2BAF9414003F0DF2 /* NavigationBar.swift */; };
+		C3BBAA9F2BB7556400289AE4 /* StoreDetailView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C3BBAA9E2BB7556400289AE4 /* StoreDetailView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -37,6 +38,7 @@
 		C386127E2BAF9033003F0DF2 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		C38612812BAF9033003F0DF2 /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
 		C386128A2BAF9414003F0DF2 /* NavigationBar.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NavigationBar.swift; sourceTree = "<group>"; };
+		C3BBAA9E2BB7556400289AE4 /* StoreDetailView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StoreDetailView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -82,6 +84,7 @@
 			children = (
 				C361F75E2BB715BB00DA683B /* StoreItemView.swift */,
 				C361F7602BB717B600DA683B /* StoresContainerView.swift */,
+				C3BBAA9E2BB7556400289AE4 /* StoreDetailView.swift */,
 			);
 			path = StoresView;
 			sourceTree = "<group>";
@@ -219,6 +222,7 @@
 				C361F7612BB717B600DA683B /* StoresContainerView.swift in Sources */,
 				C33C39452BB0BEC200470EF2 /* OrderTypeView.swift in Sources */,
 				C361F75F2BB715BB00DA683B /* StoreItemView.swift in Sources */,
+				C3BBAA9F2BB7556400289AE4 /* StoreDetailView.swift in Sources */,
 				C3346B632BAFA18C003A8A71 /* OrderTypeGridView.swift in Sources */,
 				C386127B2BAF9031003F0DF2 /* ChefDeliveryApp.swift in Sources */,
 				C386128B2BAF9414003F0DF2 /* NavigationBar.swift in Sources */,
