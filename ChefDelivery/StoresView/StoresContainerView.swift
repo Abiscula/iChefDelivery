@@ -8,8 +8,14 @@
 import SwiftUI
 
 struct StoresContainerView: View {
+  
+  let title = "Lojas"
+  
     var body: some View {
-        Text(/*@START_MENU_TOKEN@*/"Hello, World!"/*@END_MENU_TOKEN@*/)
+      VStack {
+        Text(title)
+          .font(.headline)
+      }
     }
 }
 
