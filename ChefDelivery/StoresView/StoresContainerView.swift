@@ -27,6 +27,15 @@ struct StoresContainerView: View {
                 Spacer()
                 
                 Menu("Filtrar") {
+                    
+                    Button {
+                        ratingFilter = 0
+                    } label: {
+                        Text("Limpar filtro")
+                    }
+                    
+                    Divider()
+                    
                     ForEach(1...5, id: \.self) { rating in
                         Button {
                             ratingFilter = rating
@@ -40,11 +49,21 @@ struct StoresContainerView: View {
 
             
             VStack(alignment: .leading, spacing: 30) {
-                ForEach(filteredStores) { mock in
-                    NavigationLink {
-                        StoreDetailView(store: mock)
-                    } label: {
-                        StoreItemView(store: mock)
+                
+                if filteredStores.isEmpty {
+                    Text("Nenhum resultado encontrado.")
+                        .font(.title2)
+                        .bold()
+                        .foregroundStyle(Color("ColorRed"))
+                        .padding(.vertical, 32)
+                        .frame(maxWidth: .infinity)
+                } else {
+                    ForEach(filteredStores) { mock in
+                        NavigationLink {
+                            StoreDetailView(store: mock)
+                        } label: {
+                            StoreItemView(store: mock)
+                        }
                     }
                 }
             }
