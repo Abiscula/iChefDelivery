@@ -32,6 +32,7 @@ struct ProductDetailView: View {
                     .font(.title3)
                     .bold()
                     .padding(.horizontal)
+                    .padding(.top)
             }
             
             Spacer()
