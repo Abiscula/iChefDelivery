@@ -18,6 +18,8 @@
 		C381F5B92BBB7488009030B9 /* StoreDetailHeaderView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C381F5B82BBB7488009030B9 /* StoreDetailHeaderView.swift */; };
 		C381F5BB2BBB7584009030B9 /* StoreDetailProductsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C381F5BA2BBB7584009030B9 /* StoreDetailProductsView.swift */; };
 		C381F5BD2BBB772F009030B9 /* StoreDetailProductItemView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C381F5BC2BBB772F009030B9 /* StoreDetailProductItemView.swift */; };
+		C381F5C02BBB7B16009030B9 /* ProductDetailHeaderView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C381F5BF2BBB7B16009030B9 /* ProductDetailHeaderView.swift */; };
+		C381F5C22BBB7B8B009030B9 /* ProductDetailQuantityView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C381F5C12BBB7B8B009030B9 /* ProductDetailQuantityView.swift */; };
 		C386127B2BAF9031003F0DF2 /* ChefDeliveryApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = C386127A2BAF9031003F0DF2 /* ChefDeliveryApp.swift */; };
 		C386127D2BAF9031003F0DF2 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C386127C2BAF9031003F0DF2 /* ContentView.swift */; };
 		C386127F2BAF9033003F0DF2 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = C386127E2BAF9033003F0DF2 /* Assets.xcassets */; };
@@ -42,6 +44,8 @@
 		C381F5B82BBB7488009030B9 /* StoreDetailHeaderView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StoreDetailHeaderView.swift; sourceTree = "<group>"; };
 		C381F5BA2BBB7584009030B9 /* StoreDetailProductsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StoreDetailProductsView.swift; sourceTree = "<group>"; };
 		C381F5BC2BBB772F009030B9 /* StoreDetailProductItemView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StoreDetailProductItemView.swift; sourceTree = "<group>"; };
+		C381F5BF2BBB7B16009030B9 /* ProductDetailHeaderView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProductDetailHeaderView.swift; sourceTree = "<group>"; };
+		C381F5C12BBB7B8B009030B9 /* ProductDetailQuantityView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProductDetailQuantityView.swift; sourceTree = "<group>"; };
 		C38612772BAF9031003F0DF2 /* ChefDelivery.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = ChefDelivery.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		C386127A2BAF9031003F0DF2 /* ChefDeliveryApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChefDeliveryApp.swift; sourceTree = "<group>"; };
 		C386127C2BAF9031003F0DF2 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
@@ -194,6 +198,8 @@
 			isa = PBXGroup;
 			children = (
 				C3FD2A862BB85ECF000C686F /* ProductDetailView.swift */,
+				C381F5BF2BBB7B16009030B9 /* ProductDetailHeaderView.swift */,
+				C381F5C12BBB7B8B009030B9 /* ProductDetailQuantityView.swift */,
 			);
 			path = ProductView;
 			sourceTree = "<group>";
@@ -268,11 +274,13 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				C381F5C02BBB7B16009030B9 /* ProductDetailHeaderView.swift in Sources */,
 				C33C39412BB08E7500470EF2 /* OrderType.swift in Sources */,
 				C3FD2A872BB85ECF000C686F /* ProductDetailView.swift in Sources */,
 				C3BBAAA32BB772DD00289AE4 /* ProductType.swift in Sources */,
 				C34682AF2BB3B55B00C569BD /* CarouselItemView.swift in Sources */,
 				C386127D2BAF9031003F0DF2 /* ContentView.swift in Sources */,
+				C381F5C22BBB7B8B009030B9 /* ProductDetailQuantityView.swift in Sources */,
 				C3FD2A842BB84D60000C686F /* Double+.swift in Sources */,
 				C33C39432BB08EEB00470EF2 /* DataSourceMock.swift in Sources */,
 				C361F7612BB717B600DA683B /* StoresContainerView.swift in Sources */,
