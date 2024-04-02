@@ -10,6 +10,7 @@ import SwiftUI
 struct ProductDetailView: View {
     
     let product: ProductType
+    @State private var productQuantity = 1
     
     
     var body: some View {
@@ -19,7 +20,7 @@ struct ProductDetailView: View {
             
             Spacer()
             
-            ProductDetailQuantityView()
+            ProductDetailQuantityView(productQuantity: $productQuantity)
             
             Spacer()
             
