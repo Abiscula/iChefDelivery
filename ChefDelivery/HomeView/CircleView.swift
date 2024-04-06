@@ -12,17 +12,18 @@ struct CircleView: View {
     let color: Color
     let positionX: Double
     let positionY: Double
+    let hasAnimating: Bool
     
     var body: some View {
         Circle()
             .foregroundColor(color)
-            .frame(width: 200)
+            .frame(width: hasAnimating ? 200 : 0)
             .position(x: positionX, y: positionY)
             .blur(radius: 60)
-            .opacity(0.5)
+            .opacity(hasAnimating ? 0.5 : 0)
     }
 }
 
 #Preview {
-    CircleView(color: Color("ColorRed"), positionX: 50.0, positionY: 100.0)
+    CircleView(color: Color("ColorRed"), positionX: 50.0, positionY: 100.0, hasAnimating: false)
 }
