@@ -10,6 +10,7 @@ import SwiftUI
 struct HomeView: View {
     
     @State private var isAnimating = false
+    @State private var imageOfsset: CGSize = .zero
     
     var body: some View {
         
@@ -45,7 +46,21 @@ struct HomeView: View {
                         .opacity(isAnimating ? 1 : 0)
                         .offset(y: isAnimating ? 0 : -40)
                     
-                    Spacer()
+                    Image("image")
+                        .resizable()
+                        .scaledToFit()
+                        .shadow(radius: 60)
+                        .padding(32)
+                        .offset(x: imageOfsset.width, y: imageOfsset.height)
+                        .gesture(
+                            DragGesture()
+                                .onChanged({ gesture in
+                                    imageOfsset = gesture.translation
+                                })
+                                .onEnded({ _ in
+                                    imageOfsset = .zero
+                                })
+                        )
                 }
                 .onAppear {
                     withAnimation(.easeInOut(duration: 1.5)) {
