@@ -30,6 +30,14 @@ struct DragButtonView: View {
                 .offset(x: 20)
             
             HStack {
+                Capsule()
+                    .fill(Color("ColorRed"))
+                    .frame(width: buttonOfsset + buttonHeight)
+                
+                Spacer()
+            }
+            
+            HStack {
                 ZStack {
                     Circle()
                         .fill(Color("ColorRed"))
@@ -59,8 +67,13 @@ struct DragButtonView: View {
                         
                     })
                     .onEnded({ _ in
-                        withAnimation(.easeInOut(duration: 0.25)) {
-                            buttonOfsset = 0
+                        
+                        if(buttonOfsset > (geometryWidth - 60) / 2) {
+                            // navegar para proxima tela
+                        } else {
+                            withAnimation(.easeInOut(duration: 0.25)) {
+                                buttonOfsset = 0
+                            }
                         }
                     })
             )
