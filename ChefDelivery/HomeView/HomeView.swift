@@ -11,7 +11,7 @@ struct HomeView: View {
     
     @State private var isAnimating = false
     @State private var imageOfsset: CGSize = .zero
-
+    @State private var showSecondScreen: Bool = false
     
     var body: some View {
         
@@ -33,7 +33,7 @@ struct HomeView: View {
                 
                 VStack {
                     Text("Chef Delivery")
-                        .font(.system(size: 40))
+                        .font(.system(size: 48))
                         .fontWeight(.heavy)
                         .foregroundColor(Color("ColorRed"))
                         .opacity(isAnimating ? 1 : 0)
@@ -68,7 +68,7 @@ struct HomeView: View {
                                 })
                         )
                     
-                    DragButtonView(geometryWidth: geometry.size.width)
+                    DragButtonView(showScreen: $showSecondScreen, hasAnimating: $isAnimating, geometryWidth: geometry.size.width)
 
                 }
                 .onAppear {
@@ -77,6 +77,9 @@ struct HomeView: View {
                     }
                 }
             }
+            .fullScreenCover(isPresented: $showSecondScreen, content: {
+                ContentView()
+            })
         }
     }
 }

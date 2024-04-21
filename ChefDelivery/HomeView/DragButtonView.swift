@@ -10,9 +10,10 @@ import SwiftUI
 struct DragButtonView: View {
     
     @State private var buttonOfsset: CGFloat = 0
+    @Binding var showScreen: Bool
+    @Binding var hasAnimating: Bool
     let buttonHeight: CGFloat = 80
     let geometryWidth: CGFloat
-    
     
     var body: some View {
         ZStack {
@@ -69,7 +70,7 @@ struct DragButtonView: View {
                     .onEnded({ _ in
                         
                         if(buttonOfsset > (geometryWidth - 60) / 2) {
-                            // navegar para proxima tela
+                            showScreen = true;
                         } else {
                             withAnimation(.easeInOut(duration: 0.25)) {
                                 buttonOfsset = 0
@@ -81,9 +82,11 @@ struct DragButtonView: View {
 
         }
         .frame(width: geometryWidth - 60, height: buttonHeight)
+        .opacity(hasAnimating ? 1 : 0)
+        .offset(y: hasAnimating ? 0 : 100)
     }
 }
 
 #Preview {
-    DragButtonView(geometryWidth: 400)
+    DragButtonView(showScreen: .constant(false), hasAnimating: .constant(false), geometryWidth: 400)
 }
