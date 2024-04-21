@@ -11,6 +11,7 @@ struct HomeView: View {
     
     @State private var isAnimating = false
     @State private var imageOfsset: CGSize = .zero
+
     
     var body: some View {
         
@@ -50,23 +51,31 @@ struct HomeView: View {
                         .resizable()
                         .scaledToFit()
                         .shadow(radius: 60)
-                        .padding(32)
+                        .padding(isAnimating ? 32 : 92)
+                        .opacity(isAnimating ? 1 : 0)
                         .offset(x: imageOfsset.width, y: imageOfsset.height)
                         .gesture(
                             DragGesture()
                                 .onChanged({ gesture in
-                                    imageOfsset = gesture.translation
+                                    withAnimation(.easeInOut(duration: 0.5)) {
+                                        imageOfsset = gesture.translation
+                                    }
                                 })
                                 .onEnded({ _ in
-                                    imageOfsset = .zero
+                                    withAnimation(.easeInOut(duration: 0.5)) {
+                                        imageOfsset = .zero
+                                    }
                                 })
                         )
+                    
+                    DragButtonView(geometryWidth: geometry.size.width)
+
                 }
                 .onAppear {
                     withAnimation(.easeInOut(duration: 1.5)) {
                         isAnimating = true
                     }
-            }
+                }
             }
         }
     }
