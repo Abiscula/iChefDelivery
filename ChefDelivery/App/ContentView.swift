@@ -30,7 +30,7 @@ struct ContentView: View {
     }
     
     func fetchData() {
-        guard let url = URL(string: "https://private-425152-chefdelivery11.apiary-mock.com/questions") else {
+        guard let url = URL(string: "https://private-425152-chefdelivery11.apiary-mock.com/home") else {
             return
         }
         
@@ -38,12 +38,7 @@ struct ContentView: View {
             if let error = error {
                 print(error.localizedDescription)
             } else if let data = data {
-                do {
-                    let json = try JSONSerialization.jsonObject(with: data) as? [[String: Any]]
-                    print(json)
-                } catch {
-                    print(error.localizedDescription)
-                }
+                let storeObjects = try? JSONDecoder().decode([StoreType].self, from: data)
             }
         }.resume()
     }
