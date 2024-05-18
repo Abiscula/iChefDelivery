@@ -56,6 +56,12 @@ struct ContentView: View {
         }
     }
     
+    func getStoresWithAlamoFire() {
+        service.fetchDataWithAlamofire { stores, error in
+           print(stores)
+        }
+    }
+    
 }
 
 #Preview() {
